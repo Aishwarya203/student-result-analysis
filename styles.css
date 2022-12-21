@@ -1,0 +1,206 @@
+/* Tabs Name Container */
+.tabs-container {
+  position: relative;
+  background: #2652cc;
+  width: 120px;
+  height: 43vh;
+  float: left;
+  z-index: 20;
+}
+/* Tabs Names Label */
+.tabs-container label {
+  position: relative;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: block;
+  font-size: 19px;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hover effect on tabs names */
+.tabs-container label:hover {
+  background: rgba(241, 236, 236, 0.2);
+}
+/* Content area for tabs */
+.tab-content {
+  position: relative;
+  background: #eee;
+  width: calc(100% - 120px);
+  min-height: 100vh;
+  padding: 15px;
+  float: left;
+  box-sizing: border-box;
+  z-index: 19;
+  display: none;
+}
+
+.tab-content:after {
+  content: "";
+  clear: both;
+}
+/* Hide input radio from users */
+input[name="tab"] {
+  display: none;
+}
+/* Show tab when input checked */
+input[name="tab"]:checked + .tab-content {
+  display: block;
+  animation: slide 0.5s forwards;
+}
+
+/* Slide animation for tab contents */
+@keyframes slide {
+  from {
+    left: -100%;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+/* Show tab when input checked */
+#tab1:checked ~ .tabs-container ~ #content1,
+#tab2:checked ~ .tabs-container ~ #content2,
+#tab3:checked ~ .tabs-container ~ #content3,
+#tab4:checked ~ .tabs-container ~ #content4 {
+  display: block;
+  animation: slide 0.5s forwards;
+}
+/* Active Tab Name */
+#tab1:checked ~ .tabs-container #label1,
+#tab2:checked ~ .tabs-container #label2,
+#tab3:checked ~ .tabs-container #label3,
+#tab4:checked ~ .tabs-container #label4 {
+  background: red;
+}
+body {
+  background-image: url("./images/amc logo.jpg");
+  background-size: 100%;
+}
+.codehim-form {
+  max-width: 229px;
+  min-height: 300px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 4px 2px 16px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  margin: 20px auto 0 auto;
+  padding: 17px;
+  color: #fff;
+  border-right: 101px;
+}
+.cm-input {
+  display: block;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  margin: 14px auto;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+.cm-input:invalid {
+  border-color: #e41b17;
+}
+/* Login Button Design */
+
+.btn-login {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.btn-login:focus {
+  outline: 0;
+}
+
+.btn-login:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+/* Gradient Background */
+.gr-bg {
+  background: rgb(252, 205, 128);
+  background: linear-gradient(
+    90deg,
+    rgba(252, 205, 128, 1) 0%,
+    rgba(209, 122, 142, 1) 55%,
+    rgba(220, 159, 174, 1) 100%
+  );
+}
+/* For, tiele */
+.form-title {
+  padding: 12px;
+  text-align: right;
+  position: relative;
+}
+.form-title h2 {
+  color: #5c86e1;
+}
+.form-title .user-icon {
+  position: absolute;
+  font-size: 42px;
+  color: #fff;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+  border-radius: 45px;
+  top: -30px;
+  left: -95px;
+}
+.simpleLogin form {
+  max-width: 250px;
+  margin: auto;
+  background: #fefefd;
+  box-shadow: 0 10px 10px #222;
+  border-right: 357px;
+}
+.simpleLogin form fieldset {
+  border: 0 none;
+  margin: 0;
+  padding: 17px;
+  bottom: -77px;
+  border-right: 357px;
+}
+.simpleLogin form legend,
+.simpleLogin form fieldset input {
+  font-family: Open Sans;
+  font-size: 15px;
+}
+.simpleLogin form legend {
+  background-color: lightcoral;
+  border-top: 91px;
+  color: white;
+  display: table-cell;
+  padding: 0;
+  width: auto;
+}
+.simpleLogin form fieldset input {
+  width: 50%;
+  margin: 10px 0;
+  padding: 10px 5%;
+  border: grey solid;
+}
+.simpleLogin input[type="submit"] {
+  width: 100px;
+  float: right;
+  background: lightcoral;
+  color: white;
+  transition: 0.2s;
+  border: 0;
+  cursor: pointer;
+}
+.simpleLogin input[type="submit"]:focus,
+.simpleLogin input[type="submit"]:hover,
+.simpleLogin input[type="submit"]:active {
+  padding: 10px 5%;
+  background: lightcoral;
+  outline: none;
+}
